@@ -2,15 +2,79 @@
   "tools": [
     {
       "name": "todo_list",
-      "description": "Manages a personal todo list stored in data/todo.json. Use this to add, view, read, complete, or delete tasks for the user. Each task has an id, title, optional due date, and a done status.",
-      "functions": {
-        "add_todo": "Creates a new task. Requires a title, date is optional (format: YYYY-MM-DD).",
-        "view_todos": "Prints all tasks in a table showing id, done status, date, and title.",
-        "get_todo": "Reads a single task by its id.",
-        "complete_todo": "Marks a task as done by its id.",
-        "delete_todo": "Deletes a task by its id."
-      },
-      "file": "tools/todo.py"
+      "description": "Manages a personal todo list. Use this to add, view, complete, or delete tasks for the user.",
+      "file": "tools/todo.py",
+      "functions": [
+        {
+          "name": "add_todo",
+          "description": "Adds a new task to the todo list",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "description": "The name of the task"
+              },
+              "date": {
+                "type": "string",
+                "description": "Optional due date in YYYY-MM-DD format"
+              }
+            },
+            "required": ["title"]
+          }
+        },
+        {
+          "name": "view_todos",
+          "description": "Shows all tasks in the todo list",
+          "parameters": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        {
+          "name": "get_todo",
+          "description": "Reads a single task by its ID",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "todo_id": {
+                "type": "integer",
+                "description": "The ID of the task"
+              }
+            },
+            "required": ["todo_id"]
+          }
+        },
+        {
+          "name": "complete_todo",
+          "description": "Marks a task as done by its ID",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "todo_id": {
+                "type": "integer",
+                "description": "The ID of the task to complete"
+              }
+            },
+            "required": ["todo_id"]
+          }
+        },
+        {
+          "name": "delete_todo",
+          "description": "Deletes a task by its ID",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "todo_id": {
+                "type": "integer",
+                "description": "The ID of the task to delete"
+              }
+            },
+            "required": ["todo_id"]
+          }
+        }
+      ]
     }
   ]
 }
