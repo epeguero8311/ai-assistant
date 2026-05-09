@@ -1,3 +1,16 @@
 {
-  "tools": []
+  "tools": [
+    {
+      "name": "todo_list",
+      "description": "Manages a personal todo list stored in data/todo.json. Use this to add, view, read, complete, or delete tasks for the user. Each task has an id, title, optional due date, and a done status.",
+      "functions": {
+        "add_todo": "Creates a new task. Requires a title, date is optional (format: YYYY-MM-DD).",
+        "view_todos": "Prints all tasks in a table showing id, done status, date, and title.",
+        "get_todo": "Reads a single task by its id.",
+        "complete_todo": "Marks a task as done by its id.",
+        "delete_todo": "Deletes a task by its id."
+      },
+      "file": "tools/todo.py"
+    }
+  ]
 }
