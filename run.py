@@ -10,7 +10,7 @@ from tools.git_sync import sync
 
 TOOLS_PATH = "tools.json"
 PROMPT_PATH = "prompts/system_prompt.txt"
-MODEL = "llama3.2-tool:latest"
+MODEL = "llama3.1:8b"
 
 
 def load_tools():
