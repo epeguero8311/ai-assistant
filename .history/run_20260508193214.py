@@ -3,7 +3,7 @@ import ollama
 
 TOOLS_PATH = "tools.json"
 PROMPT_PATH = "prompts/system_prompt.txt"
-MODEL = "llama3.2-tool:latest"
+MODEL = "llama3.2"
 
 def load_tools():
     with open(TOOLS_PATH) as f:
