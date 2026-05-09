@@ -113,7 +113,7 @@ def delete_todo(todo_id):
 
 
 
-if __name__ == "__main__":
-    view_todos()
-    complete_todo(2)
-    view_todos()
+# if __name__ == "__main__":
+#     view_todos()
+#     complete_todo(2)
+#     view_todos()
