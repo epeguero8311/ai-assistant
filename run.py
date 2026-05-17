@@ -114,7 +114,8 @@ def main():
         response = ollama.chat(
             model=MODEL,
             messages=[{"role": "system", "content": system_prompt}] + history,
-            tools=ollama_tools
+            tools=ollama_tools,
+            options={"num_ctx": 2048}
         )
 
         message = response["message"]
