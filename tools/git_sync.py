@@ -11,6 +11,7 @@ def sync(message=None):
         message = f"sync: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
 
     commands = [
+        ["git", "pull", "--rebase"],
         ["git", "add", "data/"],
         ["git", "commit", "-m", message],
         ["git", "push"]
